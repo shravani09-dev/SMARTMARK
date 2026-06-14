@@ -25,8 +25,9 @@ def style_background_dashboard():
     st.markdown('''
     
     <style>
-                
-                
+                .stApp{
+                     background:#E0E3FF !important;
+                }
     </style>
 
     ''', unsafe_allow_html=True)
@@ -77,6 +78,7 @@ def style_base_layout():
             color:white !important;
             border:None !important;
             transition:transform 0.25s ease-in-out !important;
+            
         }
                 
         button[kind=secondary]{
@@ -86,6 +88,7 @@ def style_base_layout():
             color:white !important;
             border:None !important;
             transition:transform 0.25s ease-in-out !important;
+        
         }
                 
         button[kind=ternary]{

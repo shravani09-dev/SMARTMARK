@@ -16,3 +16,6 @@ pillow
 
 
 streamlit
+
+librosa
+resemyzerblyzer
