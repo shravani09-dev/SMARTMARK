@@ -35,7 +35,7 @@ def get_face_embedding(image_np):
 
 @st.cache_resource
 def get_trained_model():
-    x = []
+    X = []
     y = []
 
     students_db =get_all_students()
@@ -46,20 +46,20 @@ def get_trained_model():
     for student in students_db:
         embedding = student.get('face_embedding')
         if embedding:
-            x.append(np.array(embedding))
+            X.append(np.array(embedding))
             y.append(student.get('student_id'))
 
-    if len(x) ==0:
+    if len(X) ==0:
         return 0
     
     clf = SVC(kernel='linear',probability=True, class_weight='balanced')
 
     try:
-        clf.fit(x,y)
+        clf.fit(X,y)
     except ValueError:
         pass
 
-    return {'clf':clf , 'X':x , 'y':y}
+    return {'clf':clf , 'X':X , 'y':y}
 
 def train_classifier():
     st.cache_resource.clear()
@@ -77,10 +77,10 @@ def predict_attendance(class_image_np):
         return detected_student, [], len(encodings)
     
     clf = model_data['clf']
-    x_train = model_data['x']
+    x_train = model_data['X']
     y_train = model_data['y']
 
-    all_students = sorted(list)
+    all_students = sorted(list(set(y_train)))
 
     for encoding in encodings:
         if len(all_students)>= 2:
@@ -96,7 +96,7 @@ def predict_attendance(class_image_np):
 
         if best_match_score <= np.linalg.norm(student_embedding - encoding):
             detected_student[predicted_id] = True
-        return detected_student, all_students, len(encodings)
+    return detected_student, all_students, len(encodings)
 
 
 
