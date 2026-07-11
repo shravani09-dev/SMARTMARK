@@ -33,7 +33,7 @@ recognition and voice verification — no paper, no proxies.
     <td>dlib-bin,face_recognition,scikit-learn</td>
   </tr>
 
-    <tr>
+   <tr>
     <td>Voice Recognition</td>
     <td>resemblyzer, librosa</td>
   </tr>
@@ -79,7 +79,7 @@ This structure keeps product flows separated from AI pipelines and database acce
 <hr>
 
 <h2>Folder Structure</h2>
-'''text
+```text
 SmartMark/
 |-- app.py
 |-- requirements.txt
@@ -109,7 +109,7 @@ SmartMark/
     `-- ui/
         `-- base_layout.py
  
-'''
+```
 <hr>
 <h2>Getting Started</h2>
 <h3>1.Clone the repository</h3>
