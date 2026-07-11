@@ -79,7 +79,7 @@ This structure keeps product flows separated from AI pipelines and database acce
 <hr>
 
 <h2>Folder Structure</h2>
-```text
+```
 SmartMark/
 |-- app.py
 |-- requirements.txt
