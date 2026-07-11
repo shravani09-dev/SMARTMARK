@@ -1,5 +1,5 @@
 <h1>SmartMark — AI-Powered Attendance System</h1>
-<hr>
+
 SmartMark is a web-based attendance management system built with Streamlit that eliminates manual
 roll-calls.Teachers create sessions; students mark themselves present through real-time face 
 recognition and voice verification — no paper, no proxies.
@@ -84,7 +84,7 @@ SmartMark/
 |-- app.py
 |-- requirements.txt
 |-- README.md
-`-- src/
+|-- src/
     |-- components/
     |   |-- create_subject_dialog.py
     |   |-- dialog_add_photo.py
@@ -95,39 +95,39 @@ SmartMark/
     |   |-- dialog_voice_attendance.py
     |   |-- footer.py
     |   |-- header.py
-    |   `-- subject_card.py
+    |   |-- subject_card.py
     |-- database/
     |   |-- config.py
-    |   `-- db.py
+    |   |-- db.py
     |-- pipelines/
     |   |-- face_pipeline.py
-    |   `-- voice_pipeline.py
+    |   |-- voice_pipeline.py
     |-- screens/
     |   |-- home_screen.py
     |   |-- student_screen.py
-    |   `-- teacher_screen.py
-    `-- ui/
-        `-- base_layout.py
- 
+    |   |-- teacher_screen.py
+    |-- ui/
+        |-- base_layout.py
 ```
+
 <hr>
 <h2>Getting Started</h2>
 <h3>1.Clone the repository</h3>
-'''text
+```text
 git clone https://github.com/shravani09-dev/SMARTMARK.git
 cd SMARTMARK
-'''
+```
 
 <h3>2.Create a virtual environment</h3>
-'''text
+```text
 python -m venv venv
 source venv/bin/activate 
-'''
+```
 
 <h3>3.Install dependencies</h3>
-'''text
+```text
 pip install -r requirements.txt 
-'''
+```
 
 <h3>4.Configure Supabase secrets</h3>
 Creates '.streamlit/secrets.toml' and add:
