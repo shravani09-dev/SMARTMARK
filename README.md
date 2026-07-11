@@ -132,7 +132,7 @@ pip install -r requirements.txt
 <h3>4.Configure Supabase secrets</h3>
 Creates '.streamlit/secrets.toml' and add:
 '''text
-SUPABASE_URL = "your_supabase_project_url"
+SUPABASE_URL = "your_supabase_project_url" 
 SUPABASE_KEY = "your_supabase_anon_key"
 '''
 
